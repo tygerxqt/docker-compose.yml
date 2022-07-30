@@ -4,7 +4,7 @@ services:
   watchtower:
     contianer_name: watchtower
     image: containrrr/watchtower
-    volumes: 
+    volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
   proxy:
@@ -22,7 +22,7 @@ services:
   proxy-acme:
     container_name: proxy-acme
     image: nginxproxy/acme-companion
-    volumes_from: 
+    volumes_from:
       - proxy
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
